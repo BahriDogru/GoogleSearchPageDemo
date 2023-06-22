@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MyGoogle.css">
+    <title>My Google</title>
+</head>
+
+<body>
+
+  <div id="logo_div">
+    <img src="/images/Google_Logo.png" alt="google">
+  </div>
+  
+  <div class="search_div">
+    <form id="google_search_form1" action="https://www.google.com/search" method="GET">
+      <input type="text" name="tbm" value="isch" style="display: none;" />
+      <input type="text" name="q" id="search_input" />
+      <input id="search_image"  type="image" alt="submit" src="images/picture.png"  onclick="searchGoogle('image')" />
+    </form>
+  </div>
+  
+  <br>
+  <div class="buttons">
+    <form id="google_search_form" action="https://www.google.com/search" method="GET">
+      <input type="text" name="q" id="google_search_input" style="display: none;" />
+      <label for="search"></label>
+      <span><input class="button" name="search" type="button" value="Google Search" onclick="prepareSearch('google')" /></span>
+      <label for="lucky"></label>
+      <span><input class="button" name="lucky" type="button" value="I'm Feeling Lucky" onclick="prepareSearch('lucky')" /></span>
+    </form>
+  </div>
+
+  <script>
+    function prepareSearch(engine) {
+      var searchInput = document.getElementById("search_input").value;
+      var googleSearchInput = document.getElementById("google_search_input");
+  
+      if (engine === "google") {
+        googleSearchInput.value = searchInput;
+      } else if (engine === "lucky") {
+        googleSearchInput.value = "I'm Feeling Lucky " + searchInput;
+      }
+  
+      document.getElementById("google_search_form").submit();
+    }
+    function searchGoogle(engine) {
+        var searchInput = document.getElementById("search_input").value;
+        var encodedQuery = encodeURIComponent(searchInput);
+        var googleSearchForm = document.getElementById("google_search_form1");
+        googleSearchForm.action = "https://www.google.com/search?tbm=isch&q=" + encodedQuery;
+        googleSearchForm.submit();
+    }
+  </script>
+
+</body>
+</html>

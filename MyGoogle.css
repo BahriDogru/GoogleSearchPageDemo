@@ -1,0 +1,53 @@
+#logo_div{
+    text-align: center;
+    margin-top: 10%;
+}
+.search_div{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+#search_input{
+    min-height: 44px;
+    width: 30%;
+    resize: none;
+    margin: auto;
+    height: 40px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    background-image: url(images/search_icon.png);
+    background-position: 15px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-top: 12px;
+    overflow: hidden;
+}
+#search_image{
+    position: fixed;
+    margin-left:5px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    
+}
+    
+.buttons{
+    line-height: 37px;
+    min-width: 54px;
+    text-align: center;
+}
+.button{
+    margin: 11px 4px;
+    padding: 0 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 30px;
+    cursor: pointer;
+    
+}
